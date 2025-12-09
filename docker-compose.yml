@@ -1,0 +1,18 @@
+services:
+  analytics:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: springer-capital-analytics
+    
+    # Environment variables
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=Asia/Jakarta
+    
+    # Volume mounts for data persistence
+    volumes:
+      # Input data
+      - ./DE_Dataset_intern:/app/DE_Dataset_intern:ro
+      # Output reports (read-write)
+      - ./script/reports:/app/script/reports:rw
