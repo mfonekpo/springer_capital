@@ -200,6 +200,7 @@ All input files should be CSV with the following structure:
 ## 🔍 Usage Examples
 
 ### Running the Full Pipeline
+N/B: Before runing this command, ensure you download all dependencies in the ```requirements.txt``` file.
 ```bash
 python script/analytics.py
 ```
@@ -235,7 +236,7 @@ print(report[['referral_id', 'is_business_logic_valid']])
 ```
 
 ### Generated Report
-`script/reports/report.csv` contains validation results for all referrals
+`/reports/report.csv` contains validation results for all referrals
 
 ## 🐳 Docker Deployment
 
