@@ -7,7 +7,17 @@ console = Console()
 
 def print_pretty_profile(profiles_dict: dict):
     """
-    Takes {table_name: profile_df} and prints gorgeous tables with rich
+    Prints a dictionary of profiles in a visually appealing way.
+
+    Parameters:
+        profiles_dict (dict): Dictionary of table names to DataFrames with profile data
+
+    Each table is printed with the following columns:
+        - Column: Name of the column
+        - Type: Data type of the column
+        - Null %: Percentage of null values in the column
+        - Distinct %: Percentage of distinct values in the column
+        - Top Value → Count: Top value in the column and its count
     """
     for table_name, profile_df in profiles_dict.items():
         if profile_df.empty:
