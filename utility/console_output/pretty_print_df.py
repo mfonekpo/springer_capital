@@ -1,4 +1,3 @@
-# pretty_data.py
 from rich.table import Table
 from rich.console import Console
 from rich import box
@@ -8,7 +7,15 @@ console = Console()
 
 def print_pretty_data(data_dict: dict):
     """
-    Beautifully prints every DataFrame in the dictionary using rich.
+    Pretty prints a dictionary of DataFrames into the console.
+
+    Parameters:
+        data_dict (dict): Dictionary of table names to DataFrames
+
+    Prints each DataFrame with a header containing the table name and shape.
+    Each DataFrame is printed as a rich table with columns that are smartly truncated
+    to fit the width of the console. The first 30 rows of each DataFrame are shown, and
+    if there are more rows, a footer is added to indicate the number of additional rows.
     """
     for table_name, df in data_dict.items():
         if df.empty:
