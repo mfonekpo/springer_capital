@@ -1,12 +1,17 @@
-# profile_all.py
 import pandas as pd
-from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict
 
 
 def profile_table(df: pd.DataFrame, table_name: str = "") -> pd.DataFrame:
     """
-    Profile a single DataFrame and return a profile summary as DataFrame.
+    Profiles a given DataFrame and returns a new DataFrame with statistics about the table.
+
+    Parameters:
+        df (pd.DataFrame): DataFrame to profile
+        table_name (str, optional): Name of the table to use in the profile. Defaults to "".
+
+    Returns:
+        pd.DataFrame: DataFrame with statistics about the table
     """
     if df.empty:
         return pd.DataFrame()  # Return empty if no data
@@ -36,7 +41,7 @@ def profile_table(df: pd.DataFrame, table_name: str = "") -> pd.DataFrame:
                 top_freq = df[col].value_counts(dropna=True).iloc[0]
                 row["top_value"] = top_val
                 row["top_value_freq"] = top_freq
-            except:
+            except Exception:
                 row["top_value"] = None
                 row["top_value_freq"] = 0
         
