@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 def process_and_validate_referrals(cleaned_data: dict) -> pd.DataFrame:
     """
