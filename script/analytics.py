@@ -27,10 +27,10 @@ def print_to_console():
     Returns:
         None
     """
-    print("\n ================== Showing Tables of Cleaned Data =====================")
-    print_pretty_data(cleaned_data)
-    print("")
-    print("")
+    # print("\n ================== Showing Tables of Cleaned Data =====================")
+    # print_pretty_data(cleaned_data)
+    # print("")
+    # print("")
 
     print("\n ================== Showing Profiles of Cleaned Data =====================")
     print_pretty_profile(profiled_data)
