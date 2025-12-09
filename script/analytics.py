@@ -8,7 +8,7 @@ from pathlib import Path
 
 report_dir = Path("reports")
 report_dir.mkdir(exist_ok=True, parents=True) # create directory for reports
-data_source = "../DE Dataset - intern"
+data_source = "./DE_Dataset_intern"
 
 loaded_data = data_loader.data_loader(data_source)
 cleaned_data = clean_all_tables(loaded_data)
