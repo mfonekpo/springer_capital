@@ -15,4 +15,4 @@ services:
       # Input data
       - ./DE_Dataset_intern:/app/DE_Dataset_intern:ro
       # Output reports (read-write)
-      - ./script/reports:/app/script/reports:rw
+      - ./reports:/app/reports
